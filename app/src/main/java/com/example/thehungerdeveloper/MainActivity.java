@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     CardView startersCard;
     CardView mainsCard;
+    CardView dessertsCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         startersCard = findViewById(R.id.card_view_starters);
         mainsCard = findViewById(R.id.card_view_mains);
+        dessertsCard = findViewById(R.id.card_view_desserts);
 
 
         startersCard.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +52,16 @@ public class MainActivity extends AppCompatActivity {
                 Intent mainCoursesActivityIntent = new Intent(MainActivity.this, MainCoursesActivity.class);
 
                 startActivity(mainCoursesActivityIntent);
+            }
+        });
+
+        dessertsCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent dessertCoursesActivityIntent = new Intent(MainActivity.this, DessertsActivity.class);
+
+                startActivity(dessertCoursesActivityIntent);
             }
         });
 
